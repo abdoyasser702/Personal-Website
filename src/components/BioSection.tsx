@@ -9,44 +9,40 @@ const BioSection = () => {
   };
 
   useEffect(() => {
-    // Title Animation
-    ScrollReveal().reveal(`.${styles.bio__heading}`, {
-      duration: 500,
+  const handleLoad = () => {
+    ScrollReveal().reveal(`.${styles["project__img"]}`, {
       origin: "left",
-      distance: "50px",
-      easing: "ease-in-out",
-      reset: true,
-    });
-
-    // Paragraph Animation
-    ScrollReveal().reveal(`.${styles.bio__objective}`, {
-      duration: 500,
-      origin: "bottom",
-      distance: "30px",
-      delay: 400,
-      easing: "ease-in-out",
-      reset: true,
-    });
-
-    // Buttons Animation
-    ScrollReveal().reveal(`.${styles.bio_buttons}`, {
-      duration: 500,
-      origin: "bottom",
-      distance: "20px",
-      delay: 800,
-      easing: "ease-in-out",
-      reset: true,
-    });
-
-    // Image Animation
-    ScrollReveal().reveal(`.${styles.bio__pic_content}`, {
-      duration: 500,
-      origin: "right",
       distance: "60px",
+      duration: 800,
       easing: "ease-in-out",
+      interval: 200,
       reset: true,
     });
-  }, []);
+
+    ScrollReveal().reveal(`.${styles["project__data"]}`, {
+      origin: "bottom",
+      distance: "50px",
+      duration: 800,
+      easing: "ease-in-out",
+      interval: 300,
+      reset: true,
+    });
+
+    ScrollReveal().reveal(`.${styles["h2__heading"]}`, {
+      origin: "top",
+      distance: "40px",
+      duration: 800,
+      easing: "ease-out",
+      reset: true,
+    });
+  };
+
+  // لما الصفحة كلها تخلص تحميل، شغّل الـ animation
+  window.addEventListener("load", handleLoad);
+
+  return () => window.removeEventListener("load", handleLoad);
+}, []);
+
 
   return (
     <section id="bio" className={`${styles.bio} ${styles.section}`}>
@@ -109,3 +105,4 @@ const BioSection = () => {
 };
 
 export default BioSection;
+
