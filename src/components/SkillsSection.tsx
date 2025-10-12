@@ -7,7 +7,7 @@ const SkillsSection = () => {
     ScrollReveal().reveal(`.${styles["skills__item"]}`, {
       origin: "bottom",
       distance: "40px",
-      duration: 800,
+      duration: 400,
       easing: "ease-in-out",
       interval: 100,
       reset: true,
@@ -54,3 +54,4 @@ const SkillsSection = () => {
 };
 
 export default SkillsSection;
+
