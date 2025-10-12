@@ -11,7 +11,7 @@ const BioSection = () => {
   useEffect(() => {
     // Title Animation
     ScrollReveal().reveal(`.${styles.bio__heading}`, {
-      duration: 800,
+      duration: 500,
       origin: "left",
       distance: "50px",
       easing: "ease-in-out",
@@ -20,7 +20,7 @@ const BioSection = () => {
 
     // Paragraph Animation
     ScrollReveal().reveal(`.${styles.bio__objective}`, {
-      duration: 800,
+      duration: 500,
       origin: "bottom",
       distance: "30px",
       delay: 400,
@@ -30,7 +30,7 @@ const BioSection = () => {
 
     // Buttons Animation
     ScrollReveal().reveal(`.${styles.bio_buttons}`, {
-      duration: 800,
+      duration: 500,
       origin: "bottom",
       distance: "20px",
       delay: 800,
@@ -40,7 +40,7 @@ const BioSection = () => {
 
     // Image Animation
     ScrollReveal().reveal(`.${styles.bio__pic_content}`, {
-      duration: 800,
+      duration: 500,
       origin: "right",
       distance: "60px",
       easing: "ease-in-out",
@@ -100,7 +100,7 @@ const BioSection = () => {
       <div className={styles.bio__pic_content}>
         <img
           className={styles.bio__pic}
-          src="/Personal_image-removebg.png"
+          src="Personal_image-removebg.png"
           alt="Picture of Abdelrahman Yasser"
         />
       </div>
@@ -109,7 +109,3 @@ const BioSection = () => {
 };
 
 export default BioSection;
-
-
-
-
