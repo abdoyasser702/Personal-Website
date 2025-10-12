@@ -12,7 +12,7 @@ function App() {
     <BrowserRouter>
       <div className={styles.container}>
         <video className={styles.video_loop} autoPlay muted loop>
-          <source src="video-loop.mp4" type="video/mp4" />
+          <source src="/video-loop.mp4" type="video/mp4" />
         </video>
         <Header />
         <BioSection />
