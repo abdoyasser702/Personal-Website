@@ -100,7 +100,7 @@ const BioSection = () => {
       <div className={styles.bio__pic_content}>
         <img
           className={styles.bio__pic}
-          src="/Personal_image-removebg.png"
+          src="Personal_image-removebg.png"
           alt="Picture of Abdelrahman Yasser"
         />
       </div>
@@ -109,5 +109,6 @@ const BioSection = () => {
 };
 
 export default BioSection;
+
 
 
