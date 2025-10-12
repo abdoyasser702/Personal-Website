@@ -1,98 +1,111 @@
-import { useEffect } from "react";
-import ScrollReveal from "scrollreveal";
 import styles from "../styles.module.css";
+import { TypeAnimation } from "react-type-animation";
+import ScrollReveal from "scrollreveal";
+import { useEffect } from "react";
 
-const ProjectsSection = () => {
+const BioSection = () => {
+  const scrollHandler = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
+
   useEffect(() => {
-    ScrollReveal().reveal(`.${styles["project__img"]}`, {
+    // Title Animation
+    ScrollReveal().reveal(`.${styles.bio__heading}`, {
+      duration: 500,
       origin: "left",
-      distance: "60px",
-      duration: 800,
-      easing: "ease-in-out",
-      interval: 200,
-      reset: true,
-    });
-
-    ScrollReveal().reveal(`.${styles["project__data"]}`, {
-      origin: "bottom",
       distance: "50px",
-      duration: 800,
       easing: "ease-in-out",
-      interval: 300,
       reset: true,
     });
 
-    ScrollReveal().reveal(`.${styles["h2__heading"]}`, {
-      origin: "top",
-      distance: "40px",
-      duration: 800,
-      easing: "ease-out",
+    // Paragraph Animation
+    ScrollReveal().reveal(`.${styles.bio__objective}`, {
+      duration: 500,
+      origin: "bottom",
+      distance: "30px",
+      delay: 400,
+      easing: "ease-in-out",
+      reset: true,
+    });
+
+    // Buttons Animation
+    ScrollReveal().reveal(`.${styles.bio_buttons}`, {
+      duration: 500,
+      origin: "bottom",
+      distance: "20px",
+      delay: 800,
+      easing: "ease-in-out",
+      reset: true,
+    });
+
+    // Image Animation
+    ScrollReveal().reveal(`.${styles.bio__pic_content}`, {
+      duration: 500,
+      origin: "right",
+      distance: "60px",
+      easing: "ease-in-out",
       reset: true,
     });
   }, []);
 
   return (
-    <section id="projects" className={`${styles.Projects} ${styles.section}`}>
-      <h2 className={styles["h2__heading"]}>
-        MY FEATURED <br />
-        PROJECTS
-      </h2>
-
-      <div className={styles["project__main"]}>
-        <img
-          className={styles["project__img"]}
-          src="../e-commerce-img.png"
-          alt="E-Commerce Project"
-        />
-        <div className={styles["project__data"]}>
-          <h3 className={styles["h3__heading"]}>
-            E-Commerce <br />
-            Project
-          </h3>
-          <p className={styles["projects__description"]}>
-            A small extension that gives you access to products and categories,
-            helping you shop from your favorite brands easily. Our E-Commerce
-            extension offers a wide variety of items to make online shopping
-            fast, simple, and convenient.
-          </p>
+    <section id="bio" className={`${styles.bio} ${styles.section}`}>
+      <div className={styles.bio__data}>
+        <h1 className={styles.bio__heading}>
+          Hi There, I'M A{" "}
+          <TypeAnimation
+            sequence={[
+              "Passionate Frontend Developer",
+              3000,
+              "React Enthusiast",
+              3000,
+              "Freelancer",
+              3000,
+            ]}
+            wrapper="span"
+            speed={30}
+            repeat={Infinity}
+          />
+        </h1>
+        <p className={styles.bio__objective}>
+          My name is{" "}
+          <span className={styles.bio__name}>Abdelrahman Yasser</span>, a
+          student at{" "}
+          <a href="https://almdrasa.com/" className={styles.bio__almdrasa}>
+            Almdrasa.com
+          </a>{" "}
+          ,Frontend developer and a content creator who publishes content on
           <a
-            href="https://e-commerce-six-murex-52.vercel.app/"
-            className={styles["projects__links"]}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/abdelrahman-yasser-ahmed/"
+            className={styles.bio__linkedin}
           >
-            Live-Version
+            LinkedIn
+          </a>
+        </p>
+        <div className={styles.bio_buttons}>
+          <a
+            className={`${styles.bio__links} ${styles.say_hay_link}`}
+            onClick={() => scrollHandler("contact")}
+          >
+            Say Hi
+          </a>
+          <a
+            href="My CV.pdf"
+            className={`${styles.bio__links} ${styles.find_out_link}`}
+          >
+            Download CV<span className={styles.bio__arrow}>↓</span>
           </a>
         </div>
-
-        <div className={styles["project__data"]}>
-          <h3 className={styles["h3__heading"]}>
-            Around the World <br />
-            Project
-          </h3>
-          <p className={styles["projects__description"]}>
-            A small website that lets you explore any country around the globe
-            in seconds. With just a search, you can discover key details like
-            population, languages, currency, and more. Around the World makes
-            learning about countries quick, simple, and fun.
-          </p>
-          <a
-            href="https://around-the-world-mauve.vercel.app/"
-            className={styles["projects__links"]}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Live-Version
-          </a>
-        </div>
+      </div>
+      <div className={styles.bio__pic_content}>
         <img
-          className={styles["project__img"]}
-          src="../around-the-world-img.png"
-          alt="Around the World Project"
+          className={styles.bio__pic}
+          src="Personal_image-removebg.png"
+          alt="Picture of Abdelrahman Yasser"
         />
       </div>
     </section>
   );
 };
 
-export default ProjectsSection;
+export default BioSection;
