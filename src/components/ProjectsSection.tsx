@@ -41,7 +41,7 @@ const ProjectsSection = () => {
       <div className={styles["project__main"]}>
         <img
           className={styles["project__img"]}
-          src="./e-commerce-img.png"
+          src="../e-commerce-img.png"
           alt="E-Commerce Project"
         />
         <div className={styles["project__data"]}>
@@ -87,7 +87,7 @@ const ProjectsSection = () => {
         </div>
         <img
           className={styles["project__img"]}
-          src="./around-the-world-img.png"
+          src="../around-the-world-img.png"
           alt="Around the World Project"
         />
       </div>
@@ -96,3 +96,4 @@ const ProjectsSection = () => {
 };
 
 export default ProjectsSection;
+
