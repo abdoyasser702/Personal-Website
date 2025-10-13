@@ -598,6 +598,7 @@ form:invalid::after {
   }
   .bio__pic_content {
     max-width: 41rem;
+    margin-top: -12rem;
   }
   .bio__pic_content::before {
     width: 41rem;
