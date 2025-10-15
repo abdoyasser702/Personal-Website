@@ -408,6 +408,7 @@ html:has(.toggle__checkbox:checked) {
   background-size: contain;
   margin-left: 0.6rem;
 }
+
 /* Clients Section*/
 .clients__opinions {
   font-size: var(--font-size-40);
