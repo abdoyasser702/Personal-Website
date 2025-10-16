@@ -10,7 +10,7 @@ const ProjectsSection = () => {
       duration: 800,
       easing: "ease-in-out",
       interval: 200,
-      reset: false,
+      reset: true,
     });
 
     ScrollReveal().reveal(`.${styles["project__data"]}`, {
@@ -19,7 +19,7 @@ const ProjectsSection = () => {
       duration: 800,
       easing: "ease-in-out",
       interval: 300,
-      reset: false,
+      reset: true,
     });
 
     ScrollReveal().reveal(`.${styles["h2__heading"]}`, {
@@ -27,7 +27,7 @@ const ProjectsSection = () => {
       distance: "40px",
       duration: 800,
       easing: "ease-out",
-      reset: false,
+      reset: true,
     });
   }, []);
 

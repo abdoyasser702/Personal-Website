@@ -25,7 +25,7 @@ const BioSection = () => {
       distance: "30px",
       delay: 400,
       easing: "ease-in-out",
-      reset: false,
+      reset: true,
     });
 
     // Buttons Animation
@@ -35,7 +35,7 @@ const BioSection = () => {
       distance: "20px",
       delay: 800,
       easing: "ease-in-out",
-      reset: false,
+      reset: true,
     });
 
     // Image Animation
@@ -44,7 +44,7 @@ const BioSection = () => {
       origin: "right",
       distance: "60px",
       easing: "ease-in-out",
-      reset: false,
+      reset: true,
     });
   }, []);
 
