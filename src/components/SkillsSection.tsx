@@ -10,7 +10,7 @@ const SkillsSection = () => {
       duration: 400,
       easing: "ease-in-out",
       interval: 100,
-      reset: true,
+      reset: false,
     });
   }, []);
 
