@@ -43,6 +43,7 @@ const ProjectsSection = () => {
           className={styles["project__img"]}
           src="../e-commerce-img.png"
           alt="E-Commerce Project"
+          loading="lazy"
         />
         <div className={styles["project__data"]}>
           <h3 className={styles["h3__heading"]}>
@@ -89,6 +90,7 @@ const ProjectsSection = () => {
           className={styles["project__img"]}
           src="../around-the-world-img.png"
           alt="Around the World Project"
+          loading="lazy"
         />
       </div>
     </section>
