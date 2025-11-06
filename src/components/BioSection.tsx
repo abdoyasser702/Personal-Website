@@ -90,7 +90,7 @@ const BioSection = () => {
             Say Hi
           </a>
           <a
-            href="/My CV.pdf"
+            href="My CV.pdf"
             className={`${styles.bio__links} ${styles.find_out_link}`}
           >
             Download CV<span className={styles.bio__arrow}>↓</span>
@@ -102,6 +102,7 @@ const BioSection = () => {
           className={styles.bio__pic}
           src="/Personal_image-removebg.png"
           alt="Picture of Abdelrahman Yasser"
+          loading="lazy"
         />
       </div>
     </section>
