@@ -1,67 +1,67 @@
 /* eslint-disable */
-"use client";
+// "use client";
 import styles from "../styles/styles.module.css";
-import { TypeAnimation } from "react-type-animation";
-import { useEffect, useState } from "react";
+// import { TypeAnimation } from "react-type-animation";
+// import { useEffect, useState } from "react";
 import Image from "next/image";
 
 const BioSection = () => {
-  const [mounted, setMounted] = useState(false);
+  // const [mounted, setMounted] = useState(false);
 
   const scrollHandler = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  // useEffect(() => {
+  //   setMounted(true);
+  // }, []);
 
-  useEffect(() => {
-    if (!mounted) return;
+  // useEffect(() => {
+  //   if (!mounted) return;
 
-    // Import ScrollReveal dynamically only on client-side
-    import("scrollreveal").then((ScrollRevealModule) => {
-      const ScrollReveal = ScrollRevealModule.default;
+  //   // Import ScrollReveal dynamically only on client-side
+  //   import("scrollreveal").then((ScrollRevealModule) => {
+  //     const ScrollReveal = ScrollRevealModule.default;
 
-      // Title Animation
-      ScrollReveal().reveal(`.${styles.bio__heading}`, {
-        duration: 500,
-        origin: "left",
-        distance: "50px",
-        easing: "ease-in-out",
-        reset: false,
-      });
+  //     // Title Animation
+  //     ScrollReveal().reveal(`.${styles.bio__heading}`, {
+  //       duration: 500,
+  //       origin: "left",
+  //       distance: "50px",
+  //       easing: "ease-in-out",
+  //       reset: false,
+  //     });
 
-      // Paragraph Animation
-      ScrollReveal().reveal(`.${styles.bio__objective}`, {
-        duration: 500,
-        origin: "bottom",
-        distance: "30px",
-        delay: 400,
-        easing: "ease-in-out",
-        reset: false,
-      });
+  //     // Paragraph Animation
+  //     ScrollReveal().reveal(`.${styles.bio__objective}`, {
+  //       duration: 500,
+  //       origin: "bottom",
+  //       distance: "30px",
+  //       delay: 400,
+  //       easing: "ease-in-out",
+  //       reset: false,
+  //     });
 
-      // Buttons Animation
-      ScrollReveal().reveal(`.${styles.bio_buttons}`, {
-        duration: 500,
-        origin: "bottom",
-        distance: "20px",
-        delay: 800,
-        easing: "ease-in-out",
-        reset: false,
-      });
+  //     // Buttons Animation
+  //     ScrollReveal().reveal(`.${styles.bio_buttons}`, {
+  //       duration: 500,
+  //       origin: "bottom",
+  //       distance: "20px",
+  //       delay: 800,
+  //       easing: "ease-in-out",
+  //       reset: false,
+  //     });
 
-      // Image Animation
-      ScrollReveal().reveal(`.${styles.bio__pic_content}`, {
-        duration: 500,
-        origin: "right",
-        distance: "60px",
-        easing: "ease-in-out",
-        reset: false,
-      });
-    });
-  }, [mounted]);
+  //     // Image Animation
+  //     ScrollReveal().reveal(`.${styles.bio__pic_content}`, {
+  //       duration: 500,
+  //       origin: "right",
+  //       distance: "60px",
+  //       easing: "ease-in-out",
+  //       reset: false,
+  //     });
+  //   });
+  // }, [mounted]);
   return (
     <section id="bio" className={`${styles.bio} ${styles.section}`}>
       <div className={styles.bio__data}>
