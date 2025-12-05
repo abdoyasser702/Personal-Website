@@ -66,8 +66,8 @@ const BioSection = () => {
     <section id="bio" className={`${styles.bio} ${styles.section}`}>
       <div className={styles.bio__data}>
         <h1 className={styles.bio__heading}>
-          Hi There, I'M A{" "}
-          <TypeAnimation
+          Hi There, I'M A Passionate Frontend Developer{" "}
+          {/* <TypeAnimation
             sequence={[
               "Passionate Frontend Developer",
               3000,
@@ -79,7 +79,7 @@ const BioSection = () => {
             wrapper="span"
             speed={30}
             repeat={Infinity}
-          />
+          /> */}
         </h1>
         <p className={styles.bio__objective}>
           My name is{" "}
