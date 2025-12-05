@@ -1,47 +1,47 @@
-"use client";
-import { useEffect, useState } from "react";
+// "use client";
+// import { useEffect, useState } from "react";
 import styles from "../styles/styles.module.css";
 
 const ProjectsSection = () => {
-  const [mounted, setMounted] = useState(false);
+  // const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  // useEffect(() => {
+  //   setMounted(true);
+  // }, []);
 
-  useEffect(() => {
-    if (!mounted) return;
+  // useEffect(() => {
+  //   if (!mounted) return;
 
-    import("scrollreveal").then((ScrollRevealModule) => {
-      const ScrollReveal = ScrollRevealModule.default;
+  //   import("scrollreveal").then((ScrollRevealModule) => {
+  //     const ScrollReveal = ScrollRevealModule.default;
 
-      ScrollReveal().reveal(`.${styles["project__img"]}`, {
-        origin: "left",
-        distance: "60px",
-        duration: 800,
-        easing: "ease-in-out",
-        interval: 200,
-        reset: false,
-      });
+  //     ScrollReveal().reveal(`.${styles["project__img"]}`, {
+  //       origin: "left",
+  //       distance: "60px",
+  //       duration: 800,
+  //       easing: "ease-in-out",
+  //       interval: 200,
+  //       reset: false,
+  //     });
 
-      ScrollReveal().reveal(`.${styles["project__data"]}`, {
-        origin: "bottom",
-        distance: "50px",
-        duration: 800,
-        easing: "ease-in-out",
-        interval: 300,
-        reset: false,
-      });
+  //     ScrollReveal().reveal(`.${styles["project__data"]}`, {
+  //       origin: "bottom",
+  //       distance: "50px",
+  //       duration: 800,
+  //       easing: "ease-in-out",
+  //       interval: 300,
+  //       reset: false,
+  //     });
 
-      ScrollReveal().reveal(`.${styles["h2__heading"]}`, {
-        origin: "top",
-        distance: "40px",
-        duration: 800,
-        easing: "ease-out",
-        reset: false,
-      });
-    });
-  }, [mounted]);
+  //     ScrollReveal().reveal(`.${styles["h2__heading"]}`, {
+  //       origin: "top",
+  //       distance: "40px",
+  //       duration: 800,
+  //       easing: "ease-out",
+  //       reset: false,
+  //     });
+  //   });
+  // }, [mounted]);
 
   return (
     <section id="projects" className={`${styles.projects} ${styles.section}`}>
