@@ -3,28 +3,28 @@ import { useEffect, useState } from "react";
 import styles from "../styles/styles.module.css";
 
 const SkillsSection = () => {
-  const [mounted, setMounted] = useState(false);
+  // const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  // useEffect(() => {
+  //   setMounted(true);
+  // }, []);
 
-  useEffect(() => {
-    if (!mounted) return;
+  // useEffect(() => {
+  //   if (!mounted) return;
 
-    import("scrollreveal").then((ScrollRevealModule) => {
-      const ScrollReveal = ScrollRevealModule.default;
+  //   import("scrollreveal").then((ScrollRevealModule) => {
+  //     const ScrollReveal = ScrollRevealModule.default;
 
-      ScrollReveal().reveal(`.${styles["skills__item"]}`, {
-        origin: "bottom",
-        distance: "40px",
-        duration: 400,
-        easing: "ease-in-out",
-        interval: 100,
-        reset: false,
-      });
-    });
-  }, [mounted]);
+  //     ScrollReveal().reveal(`.${styles["skills__item"]}`, {
+  //       origin: "bottom",
+  //       distance: "40px",
+  //       duration: 400,
+  //       easing: "ease-in-out",
+  //       interval: 100,
+  //       reset: false,
+  //     });
+  //   });
+  // }, [mounted]);
 
   return (
     <section
