@@ -1,5 +1,5 @@
-"use client";
-import { useEffect, useState } from "react";
+// "use client";
+// import { useEffect, useState } from "react";
 import styles from "../styles/styles.module.css";
 
 const SkillsSection = () => {
